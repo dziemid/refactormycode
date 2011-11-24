@@ -1,4 +1,7 @@
 public class StringCalculator {
+
+    public static final String STANDARD_SEPARATOR = ",";
+
     public int add(String s) {
         if (s.isEmpty()) {
             return 0;
@@ -11,8 +14,7 @@ public class StringCalculator {
             }
             return returnValue;
         } else {
-            String standardSeparator = ",";
-            return add(s, standardSeparator);
+            return add(s, STANDARD_SEPARATOR);
         }
     }
 
