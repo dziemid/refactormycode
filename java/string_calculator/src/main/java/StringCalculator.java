@@ -3,7 +3,7 @@ public class StringCalculator {
         if (s.isEmpty()) {
             return 0;
         }
-        if (s.startsWith("//")) {
+        if (hasCustomSeparator(s)) {
             int returnValue = 0;
             for (String n : s.substring(4).split("[\n"+ s.charAt(2) +"]")) {
                 returnValue += Integer.parseInt(n);
@@ -16,5 +16,9 @@ public class StringCalculator {
             }
             return r;
         }
+    }
+
+    private boolean hasCustomSeparator(String s) {
+        return s.startsWith("//");
     }
 }
