@@ -5,7 +5,8 @@ public class StringCalculator {
         }
         if (hasCustomSeparator(s)) {
             int returnValue = 0;
-            for (String n : s.substring(4).split("[\n"+ s.charAt(2) +"]")) {
+            char customSeparator = s.charAt(2);
+            for (String n : s.substring(4).split("[\n"+ customSeparator +"]")) {
                 returnValue += Integer.parseInt(n);
             }
             return returnValue;
