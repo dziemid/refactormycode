@@ -12,12 +12,16 @@ public class StringCalculator {
             return returnValue;
         } else {
             String standardSeparator = ",";
-            int r = 0; // result
-            for (String n : s.split("[\n"+ standardSeparator +"]")) {
-                r += Integer.parseInt(n);
-            }
-            return r;
+            return add(s, standardSeparator);
         }
+    }
+
+    private int add(String separatedNumbers, String separator) {
+        int r = 0; // result
+        for (String n : separatedNumbers.split("[\n"+ separator +"]")) {
+            r += Integer.parseInt(n);
+        }
+        return r;
     }
 
     private boolean hasCustomSeparator(String s) {
