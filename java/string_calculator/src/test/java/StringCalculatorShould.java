@@ -2,7 +2,7 @@ import org.junit.Test;
 
 import static junit.framework.Assert.assertEquals;
 
-public class StringCalculatorTest {
+public class StringCalculatorShould {
 
     @Test
     public void should_treat_empty_string_as_zero() throws Exception {
