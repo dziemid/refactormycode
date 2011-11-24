@@ -13,19 +13,19 @@ public class StringCalculatorTest {
     @Test
     public void should_add_single_numbers() throws Exception {
         StringCalculator s = new StringCalculator();
-        assertEquals(17, s.add("17"));
+        assertEquals(3, s.add("3"));
     }
 
     @Test
     public void should_add_comma_separated_numbers() throws Exception {
         StringCalculator s = new StringCalculator();
-        assertEquals(2356, s.add("2341,15"));
+        assertEquals(3, s.add("1,2"));
     }
 
     @Test
     public void should_treat_new_line_as_separator() throws Exception {
         StringCalculator s = new StringCalculator();
-        assertEquals(35, s.add("34\n1"));
+        assertEquals(9, s.add("4\n5"));
     }
 
     @Test
