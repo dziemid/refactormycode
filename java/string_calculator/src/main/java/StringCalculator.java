@@ -9,12 +9,7 @@ public class StringCalculator {
         if (hasCustomSeparator(s)) {
             String separatedNumbers = s.substring(4);
             char customSeparator = s.charAt(2);
-
-            int returnValue = 0;
-            for (String n : separatedNumbers.split("[\n" + customSeparator + "]")) {
-                returnValue += Integer.parseInt(n);
-            }
-            return returnValue;
+            return add(separatedNumbers, customSeparator);
         } else {
             return add(s, STANDARD_SEPARATOR);
         }
@@ -22,7 +17,7 @@ public class StringCalculator {
 
     private int add(String separatedNumbers, char separator) {
         int result = 0;
-        for (String n : separatedNumbers.split("[\n"+ separator +"]")) {
+        for (String n : separatedNumbers.split("[\n" + separator + "]")) {
             result += Integer.parseInt(n);
         }
         return result;
