@@ -7,9 +7,11 @@ public class StringCalculator {
             return 0;
         }
         if (hasCustomSeparator(s)) {
-            int returnValue = 0;
+            String separatedNumbers = s.substring(4);
             char customSeparator = s.charAt(2);
-            for (String n : s.substring(4).split("[\n"+ customSeparator +"]")) {
+
+            int returnValue = 0;
+            for (String n : separatedNumbers.split("[\n" + customSeparator + "]")) {
                 returnValue += Integer.parseInt(n);
             }
             return returnValue;
