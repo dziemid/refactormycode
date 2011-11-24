@@ -13,4 +13,10 @@ public class StringCalculatorTest {
         assertEquals(35, s.add("34\n1")); // should treat new line as separator
         assertEquals(7, s.add("//;\n5;2")); // should support custom separators
     }
+
+    @Test
+    public void should_treat_empty_string_as_zero() throws Exception {
+        StringCalculator s = new StringCalculator();
+        assertEquals(0, s.add(""));
+    }
 }
