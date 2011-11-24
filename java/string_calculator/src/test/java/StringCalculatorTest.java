@@ -5,6 +5,12 @@ import static junit.framework.Assert.assertEquals;
 public class StringCalculatorTest {
 
     @Test
+    public void should_treat_empty_string_as_zero() throws Exception {
+        StringCalculator s = new StringCalculator();
+        assertEquals(0, s.add(""));
+    }
+
+    @Test
     public void should_add_single_numbers() throws Exception {
         StringCalculator s = new StringCalculator();
         assertEquals(17, s.add("17"));
@@ -28,9 +34,4 @@ public class StringCalculatorTest {
         assertEquals(7, s.add("//;\n5;2"));
     }
 
-    @Test
-    public void should_treat_empty_string_as_zero() throws Exception {
-        StringCalculator s = new StringCalculator();
-        assertEquals(0, s.add(""));
-    }
 }
