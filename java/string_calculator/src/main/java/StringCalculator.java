@@ -1,6 +1,6 @@
 public class StringCalculator {
 
-    public static final String STANDARD_SEPARATOR = ",";
+    public static final char STANDARD_SEPARATOR = ',';
 
     public int add(String s) {
         if (s.isEmpty()) {
@@ -20,7 +20,7 @@ public class StringCalculator {
         }
     }
 
-    private int add(String separatedNumbers, String separator) {
+    private int add(String separatedNumbers, char separator) {
         int result = 0;
         for (String n : separatedNumbers.split("[\n"+ separator +"]")) {
             result += Integer.parseInt(n);
