@@ -11,8 +11,9 @@ public class StringCalculator {
             }
             return returnValue;
         } else {
+            String standardSeparator = ",";
             int r = 0; // result
-            for (String n : s.split("[\n,]")) {
+            for (String n : s.split("[\n"+ standardSeparator +"]")) {
                 r += Integer.parseInt(n);
             }
             return r;
