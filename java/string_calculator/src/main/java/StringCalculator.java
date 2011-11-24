@@ -17,11 +17,11 @@ public class StringCalculator {
     }
 
     private int add(String separatedNumbers, String separator) {
-        int r = 0; // result
+        int result = 0;
         for (String n : separatedNumbers.split("[\n"+ separator +"]")) {
-            r += Integer.parseInt(n);
+            result += Integer.parseInt(n);
         }
-        return r;
+        return result;
     }
 
     private boolean hasCustomSeparator(String s) {
