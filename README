@@ -1,4 +1,5 @@
-Fork this repo and refactor my code!
+Fork this repo and refactor my code! (Ideally create a branch from my commit, with the code to be refactored.)
+
 -------
 
 Please do it in small commits, ideally explaining on each step what and why are You doing.
@@ -7,28 +8,28 @@ You can also put comments to your (or others) commits on GitHub.
 #1 String Calculator in Java
 -------
 
-Problem description: http://osherove.com/tdd-kata-1/
-Code to be refactored: https://github.com/dziemid/refactormycode/tree/master/java/string_calculator
-Example of refactorings: https://github.com/dziemid/refactormycode/commits/java_string_calculator_refactoring
-Example of specific small commit: https://github.com/dziemid/refactormycode/commit/355aad817cee712f5773c1df740e97dd39bbc4cf
+	Problem description: http://osherove.com/tdd-kata-1/
+	Code to be refactored: https://github.com/dziemid/refactormycode/tree/master/java/string_calculator
+	Example of refactorings: https://github.com/dziemid/refactormycode/commits/java_string_calculator_refactoring
+	Example of specific small commit: https://github.com/dziemid/refactormycode/commit/355aad817cee712f5773c1df740e97dd39bbc4cf
 
-Refactored:
+	Refactored:
 
-By Martin:
-https://github.com/mklose/refactormycode/blob/master/java/string_calculator/src/main/java/StringCalculator.java
-You can see steps by going to: https://github.com/mklose/refactormycode/commit/c5807472c30485c218a41b7645b43baeeb29704f
-and then clicking "parent" link.
+	By Martin:
+	https://github.com/mklose/refactormycode/blob/master/java/string_calculator/src/main/java/StringCalculator.java
+	You can see steps by going to: https://github.com/mklose/refactormycode/commit/c5807472c30485c218a41b7645b43baeeb29704f
+	and then clicking "parent" link.
 
-Commit browser: http://agilesurfing.pl/refactormycode/browser.html?from=c5807472c30485c218a41b7645b43baeeb29704f&to=9e9ef1c11a52580a4624743bfe902d3848d64374
+	Commit browser: http://agilesurfing.pl/refactormycode/browser.html?from=c5807472c30485c218a41b7645b43baeeb29704f&to=9e9ef1c11a52580a4624743bfe902d3848d64374
 
-By Greg:
-http://agilesurfing.pl/refactormycode/browser.html?from=0c65debd02632b7738a84d507faa0d52b2c05375&to=9e9ef1c11a52580a4624743bfe902d3848d64374
+	By Greg:
+	http://agilesurfing.pl/refactormycode/browser.html?from=0c65debd02632b7738a84d507faa0d52b2c05375&to=9e9ef1c11a52580a4624743bfe902d3848d64374
 
 
 #2 Game of Life in Java
 -------
-Problem description: http://en.wikipedia.org/wiki/Conway's_Game_of_Life
-Code to be refactored: https://github.com/dziemid/refactormycode/tree/master/java/game_of_life
+	Problem description: http://en.wikipedia.org/wiki/Conway's_Game_of_Life
+	Code to be refactored: https://github.com/dziemid/refactormycode/tree/master/java/game_of_life
 
 
 More code to improve comming soon!
