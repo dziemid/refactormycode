@@ -20,7 +20,7 @@ public class GameOfLifeControllerTest {
         Set nextGeneration = mock(Set.class);
 
         when(view.getAlifeCells()).thenReturn(cells);
-        when(generation.next(cells)).thenReturn(nextGeneration);
+        when(generation.next2(cells)).thenReturn(nextGeneration);
 
         GameOfLifeController controller = new GameOfLifeController(view, generation);
 

@@ -13,8 +13,8 @@ public class GameOfLifeController implements ViewActionsListener {
     }
 
     public void moveToNextGeneration() {
-        Collection<Cell> alifeCells = view.getAlifeCells();
-        Collection<Cell> nextCells = generation.next(alifeCells);
+        Collection<Position> alifeCells = view.getAlifeCells();
+        Collection<Cell> nextCells = generation.next2(alifeCells);
         view.display(nextCells);
     }
 

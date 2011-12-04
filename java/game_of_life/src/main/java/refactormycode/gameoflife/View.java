@@ -12,7 +12,7 @@ import java.util.Map;
 public class View extends JPanel {
 
     protected JButton nextGenerationButton;
-    Map<Cell, JCheckBox> cellsToCheckBox = new HashMap<Cell, JCheckBox>();
+    Map<Position, JCheckBox> cellsToCheckBox = new HashMap<Position, JCheckBox>();
 
     public View() {
         this.setLayout(new BorderLayout());
@@ -23,7 +23,7 @@ public class View extends JPanel {
         for (int y = 0; y < 15; y++)
             for (int x = 0; x < 15; x++) {
                 JCheckBox checkBox = new JCheckBox();
-                cellsToCheckBox.put(new Cell(x, y), checkBox);
+                cellsToCheckBox.put(new Position(x, y), checkBox);
                 checkPanel.add(checkBox);
             }
         add(checkPanel, BorderLayout.CENTER);
@@ -34,7 +34,7 @@ public class View extends JPanel {
             box.setSelected(false);
         }
         for (Cell c : nextGeneration) {
-            JCheckBox jCheckBox = cellsToCheckBox.get(c);
+            JCheckBox jCheckBox = cellsToCheckBox.get(c.getPosition());
             if (jCheckBox != null)
                 jCheckBox.setSelected(true);
         }
@@ -48,9 +48,9 @@ public class View extends JPanel {
         });
     }
 
-    public Collection<Cell> getAlifeCells() {
-        HashSet<Cell> cells = new HashSet<Cell>();
-        for (Map.Entry<Cell, JCheckBox> entry : cellsToCheckBox.entrySet()) {
+    public Collection<Position> getAlifeCells() {
+        HashSet<Position> cells = new HashSet<Position>();
+        for (Map.Entry<Position, JCheckBox> entry : cellsToCheckBox.entrySet()) {
             if (entry.getValue().isSelected()) {
                 cells.add(entry.getKey());
             }
