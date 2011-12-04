@@ -22,7 +22,7 @@ public class Generation {
             positionsToConsider.addAll(neighborhood.getNeighbors(p));
         }
 
-        HashSet<Cell> result = new HashSet<Cell>();
+        HashSet<Cell> nextGeneration = new HashSet<Cell>();
         for (Position p : positionsToConsider) {
             Set<Position> neighbors = neighborhood.getNeighbors(p);
             int count = 0;
@@ -32,10 +32,10 @@ public class Generation {
                 }
             }
             if ((cells.contains(new Cell(p)) && count == 2) || count == 3)
-                result.add(new Cell(p));
+                nextGeneration.add(new Cell(p));
         }
 
-        return result;
+        return nextGeneration;
     }
 
 }
