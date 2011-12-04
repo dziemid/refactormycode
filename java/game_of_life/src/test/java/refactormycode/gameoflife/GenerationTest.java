@@ -45,7 +45,7 @@ public class GenerationTest {
         Collection<Cell> nextGeneration = generation.next(positions);
 
         // Then
-        assertThat(nextGeneration.contains(new Cell(0,1)), is(false));
+        assertThat(nextGeneration.contains(new Position(0,1)), is(false));
     }
 
 
@@ -58,7 +58,7 @@ public class GenerationTest {
         Collection<Cell> nextGeneration = generation.next(cells);
 
         // Then
-        assertThat(nextGeneration.contains(new Cell(1,1)), is(true));
+        assertThat(nextGeneration.contains(new Position(1,1)), is(true));
     }
 
     @Test
