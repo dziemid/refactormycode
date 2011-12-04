@@ -16,14 +16,14 @@ public class Generation {
             positions.add(c.getPosition());
         }
 
-        HashSet<Position> positions2 = new HashSet<Position>();
-        positions2.addAll(positions);
+        HashSet<Position> positionsToConsider = new HashSet<Position>();
+        positionsToConsider.addAll(positions);
         for (Position p : positions) {
-            positions2.addAll(neighborhood.getNeighbors(p));
+            positionsToConsider.addAll(neighborhood.getNeighbors(p));
         }
 
         HashSet<Cell> result = new HashSet<Cell>();
-        for (Position p : positions2) {
+        for (Position p : positionsToConsider) {
             Set<Position> neighbors = neighborhood.getNeighbors(p);
             int count = 0;
             for (Position n : neighbors) {
