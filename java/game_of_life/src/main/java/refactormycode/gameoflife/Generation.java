@@ -11,18 +11,18 @@ public class Generation {
     }
 
     public Collection<Cell> next(Collection<Cell> cells) {
-        HashSet<Cell> result = new HashSet<Cell>();
         HashSet<Position> positions = new HashSet<Position>();
-        HashSet<Position> positions2 = new HashSet<Position>();
         for (Cell c : cells) {
             positions.add(c.getPosition());
         }
 
+        HashSet<Position> positions2 = new HashSet<Position>();
         positions2.addAll(positions);
         for (Position p : positions) {
             positions2.addAll(neighborhood.getNeighbors(p));
         }
 
+        HashSet<Cell> result = new HashSet<Cell>();
         for (Position p : positions2) {
             Set<Position> neighbors = neighborhood.getNeighbors(p);
             int count = 0;
