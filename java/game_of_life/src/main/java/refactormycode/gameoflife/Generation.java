@@ -31,7 +31,7 @@ public class Generation {
                     count+=1;
                 }
             }
-            if ((cells.contains(new Cell(p)) && count == 2) || count == 3)
+            if ((positionsOfLivingCells.contains(p) && count == 2) || count == 3)
                 nextGeneration.add(new Cell(p));
         }
 
