@@ -38,11 +38,11 @@ public class GenerationTest {
 
     @Test
     public void overcrowdedCellShouldDie() throws Exception {
-        List<Cell> cells = Arrays.asList(new Cell(1, 1), new Cell(-1, 1), new Cell(0, 0), new Cell(0,1), new Cell(0,2));
+        List<Position> positions = Arrays.asList(new Position(1, 1), new Position(-1, 1), new Position(0, 0), new Position(0,1), new Position(0,2));
         Generation generation = new Generation(new Neighborhood());
 
         // When
-        Collection<Cell> nextGeneration = generation.next(cells);
+        Collection<Cell> nextGeneration = generation.next2(positions);
 
         // Then
         assertThat(nextGeneration.contains(new Cell(0,1)), is(false));
@@ -51,11 +51,11 @@ public class GenerationTest {
 
     @Test
     public void threeCellsCreateLife() throws Exception {
-        List<Cell> cells = Arrays.asList(new Cell(0, 0), new Cell(0,1), new Cell(1,0));
+        List<Position> cells = Arrays.asList(new Position(0, 0), new Position(0,1), new Position(1,0));
         Generation generation = new Generation(new Neighborhood());
 
         // When
-        Collection<Cell> nextGeneration = generation.next(cells);
+        Collection<Cell> nextGeneration = generation.next2(cells);
 
         // Then
         assertThat(nextGeneration.contains(new Cell(1,1)), is(true));
@@ -63,11 +63,11 @@ public class GenerationTest {
 
     @Test
     public void sqareIsStable() throws Exception {
-        List<Cell> cells = Arrays.asList(new Cell(0, 0), new Cell(0,1), new Cell(1,0), new Cell(1,1));
+        List<Position> cells = Arrays.asList(new Position(0, 0), new Position(0,1), new Position(1,0), new Position(1,1));
         Generation generation = new Generation(new Neighborhood());
 
         // When
-        Collection<Cell> nextGeneration = generation.next(cells);
+        Collection<Cell> nextGeneration = generation.next2(cells);
 
         // Then
         assertThat(nextGeneration.size() , is(4));
