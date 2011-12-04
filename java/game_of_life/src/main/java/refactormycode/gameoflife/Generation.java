@@ -11,14 +11,14 @@ public class Generation {
     }
 
     public Collection<Cell> next(Collection<Cell> cells) {
-        HashSet<Position> positions = new HashSet<Position>();
+        HashSet<Position> positionsOfLivingCells = new HashSet<Position>();
         for (Cell c : cells) {
-            positions.add(c.getPosition());
+            positionsOfLivingCells.add(c.getPosition());
         }
 
         HashSet<Position> positionsToConsider = new HashSet<Position>();
-        positionsToConsider.addAll(positions);
-        for (Position p : positions) {
+        positionsToConsider.addAll(positionsOfLivingCells);
+        for (Position p : positionsOfLivingCells) {
             positionsToConsider.addAll(neighborhood.getNeighbors(p));
         }
 
@@ -27,7 +27,7 @@ public class Generation {
             Set<Position> neighbors = neighborhood.getNeighbors(p);
             int count = 0;
             for (Position n : neighbors) {
-                if (positions.contains(n)) {
+                if (positionsOfLivingCells.contains(n)) {
                     count+=1;
                 }
             }
