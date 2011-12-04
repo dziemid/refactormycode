@@ -10,15 +10,6 @@ public class Generation {
         this.neighborhood = neighborhood;
     }
 
-    public Collection<Cell> next(Collection<Cell> cells) {
-        HashSet<Position> positionsOfLivingCells = new HashSet<Position>();
-        for (Cell c : cells) {
-            positionsOfLivingCells.add(c.getPosition());
-        }
-
-        return next2(positionsOfLivingCells);
-    }
-
     public Collection<Cell> next2(Collection<Position> positionsOfLivingCells) {
         HashSet<Position> positionsToConsider = new HashSet<Position>();
         positionsToConsider.addAll(positionsOfLivingCells);
