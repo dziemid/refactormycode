@@ -29,12 +29,12 @@ public class View extends JPanel {
         add(checkPanel, BorderLayout.CENTER);
     }
 
-    public void display(Collection<Cell> nextGeneration) {
+    public void display(Collection<Position> nextGeneration) {
         for (JCheckBox box : cellsToCheckBox.values()) {
             box.setSelected(false);
         }
-        for (Cell c : nextGeneration) {
-            JCheckBox jCheckBox = cellsToCheckBox.get(c.getPosition());
+        for (Position c : nextGeneration) {
+            JCheckBox jCheckBox = cellsToCheckBox.get(c);
             if (jCheckBox != null)
                 jCheckBox.setSelected(true);
         }

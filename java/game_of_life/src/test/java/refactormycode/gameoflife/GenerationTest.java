@@ -18,10 +18,10 @@ public class GenerationTest {
         Generation generation = new Generation(new Neighborhood());
 
         // When
-        Collection<Cell> nextGeneration = generation.next(Arrays.asList(position));
+        Collection<Position> nextGeneration = generation.next(Arrays.asList(position));
 
         // Then
-        assertThat(nextGeneration.contains(new Cell(position)), is(false));
+        assertThat(nextGeneration.contains(position), is(false));
     }
 
     @Test
@@ -30,10 +30,10 @@ public class GenerationTest {
         Generation generation = new Generation(new Neighborhood());
 
         // When
-        Collection<Cell> nextGeneration = generation.next(positionsOfLivingCells);
+        Collection<Position> nextGeneration = generation.next(positionsOfLivingCells);
 
         // Then
-        assertThat(nextGeneration.contains(new Cell(0,1)), is(true));
+        assertThat(nextGeneration.contains(new Position(0,1)), is(true));
     }
 
     @Test
@@ -42,7 +42,7 @@ public class GenerationTest {
         Generation generation = new Generation(new Neighborhood());
 
         // When
-        Collection<Cell> nextGeneration = generation.next(positions);
+        Collection<Position> nextGeneration = generation.next(positions);
 
         // Then
         assertThat(nextGeneration.contains(new Position(0,1)), is(false));
@@ -55,7 +55,7 @@ public class GenerationTest {
         Generation generation = new Generation(new Neighborhood());
 
         // When
-        Collection<Cell> nextGeneration = generation.next(cells);
+        Collection<Position> nextGeneration = generation.next(cells);
 
         // Then
         assertThat(nextGeneration.contains(new Position(1,1)), is(true));
@@ -67,7 +67,7 @@ public class GenerationTest {
         Generation generation = new Generation(new Neighborhood());
 
         // When
-        Collection<Cell> nextGeneration = generation.next(cells);
+        Collection<Position> nextGeneration = generation.next(cells);
 
         // Then
         assertThat(nextGeneration.size() , is(4));
