@@ -26,11 +26,11 @@ public class GenerationTest {
 
     @Test
     public void happyCellShouldSurvive() throws Exception {
-        List<Cell> cells = Arrays.asList(new Cell(0, 0), new Cell(0,1), new Cell(0,2));
+        List<Position> positionsOfLivingCells = Arrays.asList(new Position(0, 0), new Position(0,1), new Position(0,2));
         Generation generation = new Generation(new Neighborhood());
 
         // When
-        Collection<Cell> nextGeneration = generation.next(cells);
+        Collection<Cell> nextGeneration = generation.next2(positionsOfLivingCells);
 
         // Then
         assertThat(nextGeneration.contains(new Cell(0,1)), is(true));

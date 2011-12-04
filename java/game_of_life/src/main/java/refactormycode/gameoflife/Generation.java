@@ -16,10 +16,10 @@ public class Generation {
             positionsOfLivingCells.add(c.getPosition());
         }
 
-        return next(positionsOfLivingCells);
+        return next2(positionsOfLivingCells);
     }
 
-    public Collection<Cell> next(HashSet<Position> positionsOfLivingCells) {
+    public Collection<Cell> next2(Collection<Position> positionsOfLivingCells) {
         HashSet<Position> positionsToConsider = new HashSet<Position>();
         positionsToConsider.addAll(positionsOfLivingCells);
         for (Position p : positionsOfLivingCells) {
