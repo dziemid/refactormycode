@@ -18,7 +18,7 @@ public class GenerationTest {
         Generation generation = new Generation(new Neighborhood());
 
         // When
-        Collection<Cell> nextGeneration = generation.next2(Arrays.asList(position));
+        Collection<Cell> nextGeneration = generation.next(Arrays.asList(position));
 
         // Then
         assertThat(nextGeneration.contains(new Cell(position)), is(false));
@@ -30,7 +30,7 @@ public class GenerationTest {
         Generation generation = new Generation(new Neighborhood());
 
         // When
-        Collection<Cell> nextGeneration = generation.next2(positionsOfLivingCells);
+        Collection<Cell> nextGeneration = generation.next(positionsOfLivingCells);
 
         // Then
         assertThat(nextGeneration.contains(new Cell(0,1)), is(true));
@@ -42,7 +42,7 @@ public class GenerationTest {
         Generation generation = new Generation(new Neighborhood());
 
         // When
-        Collection<Cell> nextGeneration = generation.next2(positions);
+        Collection<Cell> nextGeneration = generation.next(positions);
 
         // Then
         assertThat(nextGeneration.contains(new Cell(0,1)), is(false));
@@ -55,7 +55,7 @@ public class GenerationTest {
         Generation generation = new Generation(new Neighborhood());
 
         // When
-        Collection<Cell> nextGeneration = generation.next2(cells);
+        Collection<Cell> nextGeneration = generation.next(cells);
 
         // Then
         assertThat(nextGeneration.contains(new Cell(1,1)), is(true));
@@ -67,7 +67,7 @@ public class GenerationTest {
         Generation generation = new Generation(new Neighborhood());
 
         // When
-        Collection<Cell> nextGeneration = generation.next2(cells);
+        Collection<Cell> nextGeneration = generation.next(cells);
 
         // Then
         assertThat(nextGeneration.size() , is(4));

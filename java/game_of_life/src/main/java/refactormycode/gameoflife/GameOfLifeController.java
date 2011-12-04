@@ -14,7 +14,7 @@ public class GameOfLifeController implements ViewActionsListener {
 
     public void moveToNextGeneration() {
         Collection<Position> alifeCells = view.getAlifeCells();
-        Collection<Cell> nextCells = generation.next2(alifeCells);
+        Collection<Cell> nextCells = generation.next(alifeCells);
         view.display(nextCells);
     }
 

@@ -10,7 +10,7 @@ public class Generation {
         this.neighborhood = neighborhood;
     }
 
-    public Collection<Cell> next2(Collection<Position> positionsOfLivingCells) {
+    public Collection<Cell> next(Collection<Position> positionsOfLivingCells) {
         HashSet<Position> positionsToConsider = new HashSet<Position>();
         positionsToConsider.addAll(positionsOfLivingCells);
         for (Position p : positionsOfLivingCells) {
