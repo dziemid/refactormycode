@@ -14,14 +14,14 @@ public class GenerationTest {
     @Test
     public void lonelyCellDies() throws Exception {
         // Given
-        Cell cell = new Cell(0,0);
+        Position position = new Position(0,0);
         Generation generation = new Generation(new Neighborhood());
 
         // When
-        Collection<Cell> nextGeneration = generation.next(Arrays.asList(cell));
+        Collection<Cell> nextGeneration = generation.next2(Arrays.asList(position));
 
         // Then
-        assertThat(nextGeneration.contains(cell), is(false));
+        assertThat(nextGeneration.contains(new Cell(position)), is(false));
     }
 
     @Test
